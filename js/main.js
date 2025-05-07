@@ -35,6 +35,18 @@ $('form').validate({
     submitHandler: function (form) {
         alert("Sua requisição foi enviada para análise, parabéns pela aquisição!");
         form.reset();
+        $(document).ready(function(){
+  $('#carousel').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    arrows: true
+  });
+});
+$(document).ready(function(){
+  $('#data').mask('00/00/0000');
+});
+
     },
     invalidHandler: function (form, validator) {
         alert("Por favor, preencha os campos para prosseguir com a compra!");
